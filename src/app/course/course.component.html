@@ -1,0 +1,28 @@
+<button class="btn btn-success" [routerLink]="['/addcourse']">Dodaj przedmiot</button>
+<table  class="table">
+    <thead>
+      <tr>
+        <th scope="col">Tytuł</th>
+        <th scope="col">Opis</th>
+        <th scope="col">id</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let course of courses.records">
+
+        <td>{{course.title}}</td>
+        <td>{{course.description}}</td>
+        <td>{{course.id}}</td>
+
+        <td>
+          <button [routerLink]="['/addExam', course.id]"  class="btn btn-primary">Dodaj egzamin</button>
+          <button (click)="deleteCourse(course.id)"  class="btn btn-danger">Usuń przedmiot</button>
+          <button [routerLink]="['/editCourse', course.id]"  class="btn btn-info">Edytuj przedmiot</button>
+          <button [routerLink]="['/exams', course.id]"  class="btn btn-success">Egzaminy przedmiotu</button>
+
+        </td>
+      </tr>
+
+
+    </tbody>
+  </table>

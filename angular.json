@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "zadanieEgzamin"
+  "defaultProject": "zadanieEgzamin",
+  "cli": {
+    "analytics": false
+  }
 }

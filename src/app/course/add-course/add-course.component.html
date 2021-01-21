@@ -1,0 +1,46 @@
+
+<form #registerForm="ngForm"  (ngSubmit)="createCourse()">
+  <div class="form-group">
+    Data dodania:
+    <input type="date" class="form-control" placeholder="Data dodania" name="endDate"  [(ngModel)]="model.createdDate">
+</div>
+<div class="form-group">
+  Data modyfikacji:
+  <input type="date" class="form-control" placeholder="Data modyfikacji" name="endDate"  [(ngModel)]="model.modifedDate">
+</div>
+
+<!-- <div class="form-group">
+   Ip adres
+  <input type="text" class="form-control" placeholder="Numer ip" name="ipAdress"  [(ngModel)]="model.ipAddress">
+</div> -->
+
+<div class="form-group">
+  User Id
+ <input type="text" class="form-control" placeholder="Numer uzytkownika" name="userId"  [(ngModel)]="model.userId">
+</div>
+
+<div class="form-group" >
+  <label class="control-label" style="margin-right:10px">Usunięty?: </label>
+  <label class="radio-inline" >
+    <input class="mr-3" type="radio" [value]="true" name="isDeleted" [(ngModel)]="model.isDeleted" >Tak
+  </label>
+  <label class="radio-inline ml-3">
+    <input class="mr-3" type="radio" [value]="false" name="isDeleted" [(ngModel)]="model.isDeleted" >Nie
+  </label>
+</div>
+
+<div class="form-group">
+   
+  <input type="text" class="form-control" placeholder="Tytuł" name="title"  [(ngModel)]="model.title">
+</div>
+<div class="form-group">
+   
+  <input type="text" class="form-control" placeholder="Opis" name="desctiption"  [(ngModel)]="model.description">
+</div>
+
+<div class="form-group text-center my-4">
+  <button class="btn btn-success" type="submit">Dodaj</button>
+
+
+</div>
+</form>

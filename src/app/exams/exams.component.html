@@ -1,0 +1,25 @@
+
+<table  class="table">
+    <thead>
+      <tr>
+        <th scope="col">Opis</th>
+        <th scope="col">Zdany</th>
+        <th scope="col">Id</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let exam of this.exams">
+
+        
+        <td>{{exam.description}}</td>
+        <td>{{exam.isPassed}}</td>
+        <td>{{exam.id}}</td>
+        <td><button (click)="changeStatus(exam)" class="btn btn-info">Zmień status</button></td>
+        <td><button (click)="deleteExam(exam.id)" class="btn btn-danger">Usuń</button></td>
+
+      </tr>
+
+
+    </tbody>
+  </table>
+<button (click)="getExams()" class="btn-warning btn">Odśwież</button>
